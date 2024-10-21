@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getTasks, deleteTask } from "../api";
 import Task from "../components/Task";
-import Popup from "../containers/popup";
+import Popup from "../containers/Popup";
 
 const TaskList = () => {
   const [tasks, setTasks] = useState([]);
@@ -10,7 +10,7 @@ const TaskList = () => {
     const fetchTasks = async () => {
       const { data } = await getTasks();
       setTasks(data);
-      
+
       // setTasks(data);
     };
     fetchTasks();
