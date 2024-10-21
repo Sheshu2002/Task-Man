@@ -10,8 +10,9 @@ const TaskList = () => {
     const fetchTasks = async () => {
       const { data } = await getTasks();
       setTasks(data);
+      
+      // setTasks(data);
     };
-
     fetchTasks();
   }, []);
 
@@ -23,7 +24,7 @@ const TaskList = () => {
   return (
     <div>
       <div className="nav">
-      <h1 className="heading">Task Manager</h1>
+        <h1 className="heading">Task Manager</h1>
       </div>
       {tasks.map((task) => (
         <Task key={task._id} task={task} handleDelete={handleDelete} />
