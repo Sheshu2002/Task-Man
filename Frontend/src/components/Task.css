@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.d-btn {
+  background-color: red;
+
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 5px 10px;
+  margin: 0 5px;
+}
+
+.d-btn {
+  background-color: #c82333;
+}
+.e-btn {
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 5px 10px;
+  margin: 0 5px;
+  text-decoration: none;
+}
+
+.e-btn:hover {
+  color: black;
+  background-color: #218838;
+  box-shadow: 0 0 5px #1bc830, 0 0 20px #308e54, 0 0 50px #61e837,
+    0 0 100px #12d473;
+}
+.task {
+  width: 70%;
+  height: max-content;
+  background: #e6e6fa;
+  padding: 15px;
+  margin: 2% auto;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 8px 5px 15px rgb(74, 73, 73);
+  font-family: "Arima", system-ui;
+}
+.d-btn:hover {
+  box-shadow: 5px 5px 50px red;
+}
+.Tright {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.c-btn {
+  background-color: blue;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 5px 10px;
+  margin: 0 5px;
+  text-decoration: none;
+}
+.c-btn:hover {
+  box-shadow: 5px 5px 20px black;
+}
+
+.z-btn {
+  display: flex;
+  justify-content: space-around;
+}

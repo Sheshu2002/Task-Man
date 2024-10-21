@@ -1,0 +1,36 @@
+const express = require("express");
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+const taskroutes = require("./routes/taskRoutes");
+const cors = require("cors");
+
+dotenv.config();
+
+const app = express();
+
+app.use(express.json());
+
+app.use(cors());
+
+app.use("/api", taskroutes);
+
+app.get("/api", (req, res) => {
+  res.send({ message: "API is running" });
+});
+
+mongoose
+  .connect(process.env.MONGOOSE_URL,{
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log("---# Successfully Connected to Mongodb Atlas #---");
+  })
+  .catch((err) => {
+    console.log(
+      "---# Error while connecting to Mongodb Atlas #---",
+      err.message
+    );
+  });
+
+module.exports = app;
