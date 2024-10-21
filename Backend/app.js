@@ -10,11 +10,14 @@ const app = express();
 
 app.use(express.json());
 
-app.use(cors({
-  origin:"",
-  methods:["GET","POST","PUT","DELETE"],
-  credentials:true
-}));
+app.use(
+  cors({
+    origin:
+      "https://task-man-backserver-go5up7epz-wm-shashanks-projects.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
 app.use("/api", taskroutes);
 
@@ -23,7 +26,7 @@ app.get("/api", (req, res) => {
 });
 
 mongoose
-  .connect(process.env.MONGOOSE_URL,{
+  .connect(process.env.MONGOOSE_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
