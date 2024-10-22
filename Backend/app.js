@@ -19,9 +19,9 @@ app.use(
   })
 );
 
-app.use("/api", taskroutes);
+//app.use("/api", taskroutes);
 
-app.get("/api", (req, res) => {
+app.get("/", (req, res) => {
   res.send({ message: "API is running" });
 });
 
