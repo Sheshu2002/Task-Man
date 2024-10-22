@@ -12,7 +12,7 @@
 
 .take{
   border: 2px solid black;
-  position: sticky;
+  position: fixed;
   bottom: 1rem;
   height: 4rem;
   width: 80%;
