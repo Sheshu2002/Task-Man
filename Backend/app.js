@@ -19,12 +19,12 @@ app.use(
   })
 );
 
-// app.use((req, res, next) => {
-//   res.setHeader('Access-Control-Allow-Origin', 'https://task-man-chotu.vercel.app'); // Replace with your frontend domain
-//   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE'); // Allow specific HTTP methods
-//   res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); // Allow specific headers
-//   next();
-// });
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://task-man-chotu.vercel.app'); // Replace with your frontend domain
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE'); // Allow specific HTTP methods
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type'); // Allow specific headers
+  next();
+});
 
 app.use(taskroutes);
 
