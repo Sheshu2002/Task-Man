@@ -27,12 +27,14 @@ const EditTask = () => {
       <h1>Edit Task</h1>
       <input
         type="text"
-        value={task.title || "New Title"}
+        value={task.title || ""}
+        placeholder="New Title"
         onChange={(e) => setTask({ ...task, title: e.target.value })}
         required
       />
       <textarea
-        value={task.description || "New Description"}
+        value={task.description || ""}
+        placeholder="New Description"
         onChange={(e) => setTask({ ...task, description: e.target.value })}
         required
       />
