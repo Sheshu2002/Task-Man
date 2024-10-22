@@ -26,6 +26,12 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use((req, res, next) => {
+  res.setHeader("Content-Security-Policy", "default-src 'none'; script-src 'self' https://vercel.live");
+  next();
+});
+
+
 //app.use("/api", taskroutes);
 
 app.get("/", (req, res) => {
