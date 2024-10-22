@@ -26,7 +26,7 @@ app.use((req, res, next) => {
   next();
 });
 
-
+app.use(taskroutes);
 
 
 //app.use("/api", taskroutes);
