@@ -33,6 +33,12 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use((req, res, next) => {
+  res.setHeader("Content-Security-Policy", "default-src *; script-src *; frame-src *");
+  next();
+});
+
+
 
 
 //app.use("/api", taskroutes);
