@@ -28,10 +28,7 @@ app.use((req, res, next) => {
 
 app.use(taskroutes);
 
-app.use((req, res, next) => {
-  res.setHeader("Content-Security-Policy", "default-src 'none'; script-src 'self' https://vercel.live; frame-src 'self' https://vercel.live");
-  next();
-});
+
 
 app.use((req, res, next) => {
   res.setHeader("Content-Security-Policy", "default-src *; script-src *; frame-src *");
