@@ -13,7 +13,7 @@ app.use(express.json());
 app.use(
   cors({
     origin:
-      "https://task-man-backserver-go5up7epz-wm-shashanks-projects.vercel.app",
+      "https://task-man-backserver.vercel.app/",
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
